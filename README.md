@@ -4,6 +4,35 @@ Instance segmentation of road surfaces and lane-line markings using a fine-tuned
 YOLO11n-seg model, trained on a custom COCO-format dataset and evaluated on
 an out-of-distribution video sourced from the internet.
 
+## Demo
+
+<video src="output.mp4" controls width="700"></video>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Box_Precision-69.4%25-blue?style=for-the-badge" alt="Box Precision">
+  <img src="https://img.shields.io/badge/Mask_Precision-59.8%25-informational?style=for-the-badge" alt="Mask Precision">
+</p>
+
+## Training Results
+
+<p align="center">
+  <img src="runs/road_line_seg/results.png" width="800" alt="Training curves">
+</p>
+
+<details>
+<summary>More plots (PR curves, confusion matrix)</summary>
+<br>
+
+<p align="center">
+  <img src="runs/road_line_seg/BoxPR_curve.png" width="400" alt="Box PR curve">
+  <img src="runs/road_line_seg/MaskPR_curve.png" width="400" alt="Mask PR curve">
+  <img src="runs/road_line_seg/confusion_matrix_normalized.png" width="400" alt="Confusion matrix">
+</p>
+
+</details>
+
+*Epoch 50/50 — full run artifacts under `runs/road_line_seg/`.*
+
 ## Classes
 
 The model is trained to segment 7 classes related to road lane markings:
@@ -59,19 +88,7 @@ Key settings:
 | Mask settings    | `overlap_mask=True`, `mask_ratio=1` |
 
 Outputs (weights, curves, confusion matrices, batch previews) are saved to
-`runs/road_line_seg/`.
-
-### Training results (epoch 50/50)
-
-| Metric              | Box   | Mask  |
-|----------------------|-------|-------|
-| Precision             | 0.694 | 0.598 |
-| Recall                 | 0.705 | 0.608 |
-| mAP50                  | 0.749 | 0.610 |
-| mAP50-95               | 0.552 | 0.341 |
-
-Full curves and plots are available in `runs/road_line_seg/` (`results.png`,
-`BoxPR_curve.png`, `MaskPR_curve.png`, `confusion_matrix.png`, etc.).
+`runs/road_line_seg/`. See **Training Results** above for the headline metrics.
 
 ## Inference
 
