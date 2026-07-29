@@ -1,0 +1,13 @@
+path: coco_converted
+
+train: images/train2017
+val: images/val2017
+
+names:
+  0: road-roads
+  1: divider-line
+  2: dotted-line
+  3: double-line
+  4: random-line
+  5: road-sign-line
+  6: solid-line
