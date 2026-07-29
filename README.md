@@ -7,6 +7,7 @@ an out-of-distribution video sourced from the internet.
 ## Demo
 
 <video src="output.mp4" controls width="700"></video>
+[![Watch the demo](path/to/thumbnail.png)](https://github.com/Krishnandwana/Road-Lane-Instance-Segmentation/blob/main/output.mp4)
 
 ## Training Results
 
@@ -31,6 +32,30 @@ an out-of-distribution video sourced from the internet.
 </details>
 
 *Epoch 50/50 — full run artifacts under `runs/road_line_seg/`.*
+
+
+## Evaluation
+
+`test.mp4` was picked at random from the internet — i.e. it is **not** part
+of the training/validation distribution and has no ground-truth labels. To
+get a qualitative read on real-world generalization, the annotated output
+(`output.mp4`) was reviewed by GPT and scored across several qualitative
+dimensions. This is a subjective, non-benchmarked assessment (no IoU/ground
+truth involved) and should be treated as a rough sanity check rather than a
+formal metric.
+
+**Overall score: 8.7 / 10 (87 / 100)**
+
+| Category                | Score   |
+|--------------------------|---------|
+| Detection Accuracy         | 8.8 / 10 |
+| Bounding Box Quality       | 8.5 / 10 |
+| Temporal Stability         | 9.0 / 10 |
+| False Positives            | 9.2 / 10 |
+| False Negatives            | 8.2 / 10 |
+| Confidence Calibration      | 8.5 / 10 |
+| Production Readiness       | 8.8 / 10 |
+
 
 ## Classes
 
@@ -105,28 +130,6 @@ python inference.py
 | Input video  | `test.mp4`                              |
 | Output video | `output.mp4`                            |
 | Confidence   | 0.4                                      |
-
-## Evaluation
-
-`test.mp4` was picked at random from the internet — i.e. it is **not** part
-of the training/validation distribution and has no ground-truth labels. To
-get a qualitative read on real-world generalization, the annotated output
-(`output.mp4`) was reviewed by GPT and scored across several qualitative
-dimensions. This is a subjective, non-benchmarked assessment (no IoU/ground
-truth involved) and should be treated as a rough sanity check rather than a
-formal metric.
-
-**Overall score: 8.7 / 10 (87 / 100)**
-
-| Category                | Score   |
-|--------------------------|---------|
-| Detection Accuracy         | 8.8 / 10 |
-| Bounding Box Quality       | 8.5 / 10 |
-| Temporal Stability         | 9.0 / 10 |
-| False Positives            | 9.2 / 10 |
-| False Negatives            | 8.2 / 10 |
-| Confidence Calibration      | 8.5 / 10 |
-| Production Readiness       | 8.8 / 10 |
 
 ## Repo structure
 
