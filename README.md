@@ -8,15 +8,14 @@ an out-of-distribution video sourced from the internet.
 
 <video src="output.mp4" controls width="700"></video>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Box_Precision-69.4%25-blue?style=for-the-badge" alt="Box Precision">
-  <img src="https://img.shields.io/badge/Mask_Precision-59.8%25-informational?style=for-the-badge" alt="Mask Precision">
-</p>
-
 ## Training Results
 
 <p align="center">
   <img src="runs/road_line_seg/results.png" width="800" alt="Training curves">
+</p>
+
+<p align="center">
+  <img src="runs/road_line_seg/val_batch2_pred.jpg" width="800" alt="Validation batch predictions">
 </p>
 
 <details>
